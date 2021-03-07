@@ -43,7 +43,7 @@ AddEventHandler("esx_aerodealer:okOut", function()
 	TaskWarpPedIntoVehicle(PlayerPedId(), currentVeh, -1)
 	DecorSetInt(currentVeh, "owner", GetPlayerServerId(PlayerId()))
 	DecorSetInt(currentVeh, "vehicleID", vehID)
-	ESX.SetVehicleProperties(currentVeh, json.decode(props))
+	ESX.Game.SetVehicleProperties(currentVeh, json.decode(props))
 end)
 
 RegisterNetEvent("esx_aerodealer:callbackAeronefs")
